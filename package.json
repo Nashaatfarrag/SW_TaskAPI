@@ -8,9 +8,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "nashaat": "nodemon app.js && cd .. && cd ./client/ && npm run serve"
   },
-  "engines": {
-    "node": "6.2.2"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
