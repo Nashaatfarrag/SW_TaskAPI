@@ -15,8 +15,9 @@ router.get("/", [auth], async (req, res) => {
 });
 
 // get one by id
-router.get("post/:id", [auth], async (req, res) => {
-  await Post.findById(req.params.id, "name skills", (error, post) => {
+router.get("/:id", [auth], async (req, res) => {
+  
+  await Post.findById(req.params.id, (error, post) => {
     if (error) console.error(error);
 
     res.send(post);
