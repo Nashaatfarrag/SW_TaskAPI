@@ -40,7 +40,7 @@ router.post("/add_post", [auth, hr], async (req, res) => {
 
 // edit one employer
 router.put("/:id", [auth], async (req, res) => {
-  await Post.findById(req.params.id, "name department", (error, post) => {
+  await Post.findById(req.params.id, (error, post) => {
     if (error) console.error(error);
 
     post.name = req.body.name;
